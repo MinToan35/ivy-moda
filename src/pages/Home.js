@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./home.scss";
 import Slide from "../components/slide-banner/Slide";
+
 const Home = () => {
   return (
-    <div className="home-page container-custom">
+    <div className="home-page container">
       <div className="home-info">
         <Link className="info-link" to="/danh-muc/hang-nu-moi-ve">
           Free Shipping đơn hàng nguyên giá

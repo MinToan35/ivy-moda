@@ -18,8 +18,8 @@ const Header = () => {
   };
   return (
     <div className="navbar-container">
-      <nav className="navbar-custom container-custom">
-        <ul className="nav-list-custom">
+      <nav className="navbar container">
+        <ul className="nav-list">
           {data.map(({ id, name, subMenu, listSubMenu }) => {
             return (
               <li key={id} className="nav-item-custom">
