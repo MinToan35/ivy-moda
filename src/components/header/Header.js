@@ -18,20 +18,16 @@ const Header = () => {
   };
   return (
     <div className="navbar-container">
-      <nav className="navbar container">
-        <ul className="nav-list">
+      <nav className="navbar-custom container-custom">
+        <ul className="nav-list-custom">
           {data.map(({ id, name, subMenu, listSubMenu }) => {
             return (
-              <li key={id} className="nav-item">
+              <li key={id} className="nav-item-custom">
                 {name === "LIFESTYLE" ? (
-                  <Link className="nav-link" to="/tin-tuc/tin-chinh">
-                    {name}
-                  </Link>
+                  <Link to="/tin-tuc/tin-chinh">{name}</Link>
                 ) : (
                   <>
-                    <Link className="nav-link" to="/">
-                      {name}
-                    </Link>
+                    <Link to="/">{name}</Link>
                     <ul className="nav-link-item">
                       <div className="left-submenu">
                         {subMenu &&

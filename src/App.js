@@ -1,17 +1,14 @@
 import React from "react";
-import "swiper/css";
-import "./assets/boxicons-2.0.7/css/boxicons.min.css";
-import "./App.scss";
-import { BrowserRouter } from "react-router-dom";
 import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
+import "./App.scss";
 import Routes from "./config/Routes";
-export default function App() {
+const App = () => {
   return (
-    <BrowserRouter>
+    <>
       <Header />
       <Routes />
-      <Footer />
-    </BrowserRouter>
+    </>
   );
-}
+};
+
+export default App;
