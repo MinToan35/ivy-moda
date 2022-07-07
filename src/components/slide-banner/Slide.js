@@ -23,7 +23,7 @@ const Slide = () => {
     }
   };
   useEffect(() => {
-    window.addEventListener("resize", reLoad);
+    reLoad();
   }, []);
   return (
     <div className="slide">
