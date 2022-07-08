@@ -31,6 +31,7 @@
                 top:0;
                 background-color: #fff;
                 width: 100%;
+                min-height: 100vh;
                 z-index: 10;
             }
             .close-submenu{
@@ -302,6 +303,7 @@
             align-items: center;
             color: #6c6d70;
             padding:4px 40px 0;
+            
         }
         .search,.login,.help{
             display: flex;

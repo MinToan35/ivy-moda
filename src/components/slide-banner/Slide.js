@@ -30,7 +30,12 @@ const Slide = () => {
       <Slider {...settings}>
         {dataImg.map((item) => {
           return (
-            <Link key={item.id} className="slide-link" to={item.url}>
+            <Link
+              key={item.id}
+              className="slide-link"
+              to={item.url}
+              target="_blank"
+            >
               <div className="img-container">
                 <img
                   className="img-slide"

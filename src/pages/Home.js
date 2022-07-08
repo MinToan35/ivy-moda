@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./home.scss";
 import Slide from "../components/slide-banner/Slide";
-
+import SlideCategory from "../components/slide-category/SlideCategory";
 const Home = () => {
   return (
     <div className="home-page container">
@@ -18,6 +18,7 @@ const Home = () => {
         </Link>
       </div>
       <Slide />
+      <SlideCategory />
     </div>
   );
 };

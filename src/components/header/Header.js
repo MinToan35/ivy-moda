@@ -12,6 +12,8 @@ const Header = () => {
   };
   const handleClose = () => {
     sidebarRef.current.style.transform = "translateX(-100vw)";
+    sidebarRef.current.style.height = "100vh";
+    sidebarRef.current.style.overflow = "hidden";
   };
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -95,7 +97,9 @@ const Header = () => {
             })}
           </ul>
         </div>
-        <img src="https://pubcdn2.ivymoda.com/images/logo.png" alt="logo" />
+        <Link to="/">
+          <img src="https://pubcdn2.ivymoda.com/images/logo.png" alt="logo" />
+        </Link>
         <div className="right-header">
           <form className="search" onSubmit={handleSubmit}>
             <input type="text" placeholder="TÌM KIẾM SẢN PHẨM" />

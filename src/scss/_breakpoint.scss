@@ -1,4 +1,5 @@
-@mixin size1365 {
+
+@mixin size1375 {
     @media only screen and (max-width: 1365px) {
         @content;
     }
