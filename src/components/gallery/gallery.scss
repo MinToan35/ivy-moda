@@ -10,10 +10,16 @@
     }
     .slick-slider {
         margin:0 -15px;
+        @include size992{
+            margin: 0 -4px;
+        }
     }
     
     img{
         width: 100%;
         padding: 15px;
+        @include size992{
+            padding: 0 4px;
+        }
     }
 }

@@ -14,7 +14,7 @@ const Gallery = ({ slidesToShow }) => {
       <Slider {...settings}>
         {data.map((item) => {
           return (
-            <Link to="/" key={item.id} className="gallery-link">
+            <Link to="/" key={item.id}>
               <img src={item.img} alt="" />
             </Link>
           );

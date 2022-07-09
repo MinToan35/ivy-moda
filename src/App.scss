@@ -46,8 +46,8 @@ h2{
 }
 .container {
   width: 1360px;
-  margin: auto;
   padding: auto 15px;
+  text-align: end;
   @include size1375{
     width: 1140px;
   }
@@ -55,10 +55,10 @@ h2{
     width: 970px;
   }
   @include size992{
-    width: 98vw;
+    width: 92vw;
   }
   @include size768{
-    width: 96vw;
+    width: 92vw;
   }
   
 }
