@@ -4,6 +4,7 @@
         @content;
     }
 }
+
 @mixin size1200 {
     @media only screen and (max-width: 1200px) {
         @content;

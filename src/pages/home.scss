@@ -1,8 +1,6 @@
 @use '../scss/' as *;
 
 .home-page {
-    position: absolute;
-    top: 80px;
     @include size992 {
         padding: 0 5vw;
     }
