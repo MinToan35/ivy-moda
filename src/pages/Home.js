@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./home.scss";
 import Slide from "../components/slide-banner/Slide";
 import SlideCategory from "../components/slide-category/SlideCategory";
+import Trending from "../components/trending/Trending";
 const Home = () => {
   return (
     <div className="home-page container">
@@ -22,6 +23,7 @@ const Home = () => {
       <Link to="/danh-muc/hang-nu-moi-ve">
         <button className="see-more">Xem tất cả</button>
       </Link>
+      <Trending />
     </div>
   );
 };
