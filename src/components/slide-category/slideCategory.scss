@@ -1,127 +1,209 @@
-@use '../../App.scss' as *;
-.slide-category{
-    
+@use '../../scss/' as *;
+
+.slide-category {
+
     margin: 20px 0;
     text-align: center;
-    .btn-container{
+
+    .btn-container {
         margin-bottom: 28px;
-        .btn-category{
+
+        .btn-category {
             line-height: 30px;
             font-size: 20px;
             color: #6c6d70;
-            margin: 0 28px;
-            &.isActive{
+            margin-right: 56px;
+            &:last-child{
+                margin-right: 0;
+            }
+            @include size768{
+                font-size: 16px;
+            }
+            @include size768{
+                margin-right: 30px;
+            }
+            &.isActive {
                 border-bottom: 2px solid #221f20;
                 color: #221f20;
             }
         }
 
     }
-    
-    .detail-link{
+
+    .detail-link {
         outline: none;
-        img{
+
+        .img-content {
             width: 100%;
-            padding: 0 15px;
-            &:hover{
-                 + .img:hover{
-                    display: flex;
-                    position: absolute;
+            transition: 0.3s;
+
+            .img-product {
+                width: 100%;
+                padding: 0 15px;
+                @include size768{
+                    padding: 0 8px;
+                }
+            }
+
+            .img-hover {
+                display: none;
+                padding: 0 15px;
+                width: 100%;
+                @include size768{
+                    padding: 0 8px;
+                }
+            }
+
+            &:hover {
+                .img-product {
+                    display: none;
+
+                }
+
+                .img-hover {
+                    display: block;
+
                 }
             }
         }
-        .info{
+
+        .info {
             padding: 0 15px;
-            .info-header{
+            @include size768{
+                padding: 0 8px;
+            }
+            .info-header {
                 display: flex;
                 justify-content: space-between;
                 margin: 16px 0 12px;
-                .color-container{
+
+                .color-container {
                     position: relative;
                     cursor: pointer;
-                    
-                    &::before{
+
+                    &::before {
                         content: "\2713";
                         position: absolute;
                         color: #fff;
-                        top:0;
+                        top: 0;
                         left: 50%;
                         font-size: 12px;
                         transform: translateX(-50%);
                     }
                 }
-                button{
+
+                button {
                     cursor: pointer;
-                    i{
+
+                    i {
                         font-size: 18px;
                         color: #6c6d70;
                     }
                 }
             }
-            .name-product{
+
+            .name-product {
                 font-size: 14px;
                 line-height: 32px;
                 display: flex;
-                justify-content: flex-start;
+                text-align: start;
+                @include size768{
+                    font-size: 12px;
+                    line-height: 16px;
+                    min-height: 32px;
+                }
             }
-            .info-footer{
+
+            .info-footer {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 margin: 10px 0;
-                h3{
+
+                h3 {
                     font-size: 16px;
                     font-weight: 600;
+                    @include size768{
+                        font-size: 12px;
+                    }
                 }
-                button{
+
+                button {
                     width: 32px;
                     height: 32px;
                     background-color: #221f20;
                     border-radius: 8px 0;
                     transition: 0.3s;
-                    &:hover{
+                    @include size768{
+                        width: 20px;
+                        height: 20px;
+                        i{
+                            font-size: 8px;
+                        }
+                    }
+                    &:hover {
                         background-color: #fff;
                         border: 1px solid #221f20;
-                        i{
+
+                        i {
                             color: #221f20;
                         }
                     }
-                    i{
+
+                    i {
                         color: #fff;
                     }
                 }
             }
-            
+
         }
-        
+
     }
-    .slick-slider{
+
+    .slick-slider {
         position: relative;
         z-index: 2;
-        .slick-prev,.slick-next{
-            top:40%;
-            &::before{
+
+        .slick-prev,
+        .slick-next {
+            top: 40%;
+
+            &::before {
                 color: #bcbdc0;
                 font-size: 50px;
             }
-            &:hover::before{
+
+            &:hover::before {
                 color: #221f20;
             }
         }
-        .slick-next{
+
+        .slick-next {
             right: 70px;
             z-index: 10;
+
             &::before {
                 content: "\1f852";
+
+                @include size768 {
+                    display: none;
+                }
             }
+
         }
+
         .slick-prev {
             left: 40px;
             z-index: 10;
+
             &::before {
                 content: "\1f850";
+
+                @include size768 {
+                    display: none;
+                }
             }
         }
     }
-    
+
 }

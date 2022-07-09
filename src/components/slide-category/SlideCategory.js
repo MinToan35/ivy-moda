@@ -36,6 +36,7 @@ const SlideCategory = () => {
   };
   useEffect(() => {
     reLoad();
+    window.addEventListener("resize", reLoad);
   }, []);
 
   const settings = {

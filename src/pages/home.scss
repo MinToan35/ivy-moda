@@ -46,4 +46,43 @@
             }
         }
     }
+    .see-more{
+        display: block;
+        background-color: $white;
+        border: 1px solid $bg-btn;
+        margin: 24px auto;
+        padding: 13px 24px;
+        font-size: 16px;
+        color: $bg-btn;
+        border-radius: 24px 0;
+        position: relative;
+        transition: 0.3s;
+        @include size768{
+            padding: 10px 16px ;
+            border-radius: 12px 0;
+        }
+        &:hover{
+            background-color: $bg-btn;
+            color: $white;
+            &::before{
+                right: 0;
+                height: 100%;
+            }
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: -5px;
+            width: 100%;
+            height: 80%;
+            border:1px solid $border-color;
+            border-radius: 24px 0;
+            z-index: -1;
+            transition: 0.3s;
+            @include size768{
+                border-radius: 12px 0;
+            }
+        }
+    }
 }

@@ -24,6 +24,7 @@ const Slide = () => {
   };
   useEffect(() => {
     reLoad();
+    window.addEventListener("resize", reLoad);
   }, []);
   return (
     <div className="slide">

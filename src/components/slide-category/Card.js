@@ -10,8 +10,9 @@ const Card = ({ item }) => {
 
   return (
     <div className="detail-link" to="/">
-      <Link to="/">
-        <img src={item.img} alt={item.name} />
+      <Link to="/" className="img-content">
+        <img className="img-product" src={item.img} alt={item.name} />
+        <img className="img-hover" src={item.imgHover} alt={item.name} />
       </Link>
       <div className="info">
         <div className="info-header">
@@ -20,7 +21,7 @@ const Card = ({ item }) => {
           </div>
           <button onClick={handleLike}>
             {like ? (
-              <i class="fa-solid fa-heart"></i>
+              <i className="fa-solid fa-heart"></i>
             ) : (
               <i className="fa-regular fa-heart"></i>
             )}

@@ -19,6 +19,9 @@ const Home = () => {
       </div>
       <Slide />
       <SlideCategory />
+      <Link to="/danh-muc/hang-nu-moi-ve">
+        <button className="see-more">Xem tất cả</button>
+      </Link>
     </div>
   );
 };
